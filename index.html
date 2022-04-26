@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+       .section
+        {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        } 
+
+        .section h1
+        {
+            text-align: left;
+            font-size: 65px;
+            color: white;            
+        }
+
+        .video-container
+        {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;                    
+        }
+
+        @media(min-aspect-ratio : 16/9)
+        {
+            .video-container
+            {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media(max-aspect-ratio : 16/9)
+        {
+            .video-container
+            {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        .color-overlay
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: #03a9f4;
+            mix-blend-mode: overlay;
+        }
+
+        .forms
+        {
+            background-blend-mode: screen;
+            height: 200px;
+            width: 150px;
+            font-size: 30px;
+            font-weight: bolder;
+            margin: 15px;
+            padding: 20px;                      
+        }
+
+
+        .a
+        {
+            background-blend-mode: screen;
+            mix-blend-mode: screen;           
+        }
+
+        .a:hover
+        {
+            cursor: pointer;
+            
+        }
+
+        .z
+        {
+            height: 40px;
+            width: 120px;
+            font-style: 'Poppins' , sans-serif;
+            transition: 2s;
+            font-size: x-large;
+            mix-blend-mode: screen;
+            border: 3px solid violet;
+        }
+
+        .z:hover
+        {
+            transform :scale(0.5);
+            transition: 0.5s ;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="section">
+
+        <h1>3D-ART FORM</h1>
+
+        <div class="video-container">
+            <div class="color-overlay"></div>
+            <video src="3dvid.mp4" muted autoplay loop></video>
+
+        </div>
+
+        
+        <div class="forms">
+            <label for="">Name:</label>
+            <input type="text" name="" id="" class="a"></input>
+            <br><br>
+            <label for="">Password:</label>
+            <input type="password" name="" id="" class="a"></input>
+            <br><br>
+            <input type="button" value="Submit" class="z"><a href="#"></a></input>
+        </div>
+        
+    </div>
+</body>
+</html>
